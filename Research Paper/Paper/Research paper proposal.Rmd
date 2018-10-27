@@ -1,0 +1,74 @@
+---
+output: 
+  pdf_document:
+    citation_package: natbib
+    keep_tex: true
+    fig_caption: true
+    latex_engine: pdflatex
+    template: ./svm-latex-ms.tex
+title: "Proposal: What Should Central Bankers Do?"
+author:
+- name: Kaiden Billings
+  affiliation: Utah State University
+abstract: ""
+keywords: "central banks, machine learning"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+geometry: margin=1in
+fontfamily: mathpazo
+fontsize: 11pt
+spacing: double
+bibliography: ./master.bib
+biblio-style: apsr
+---
+
+
+>  
+
+# Introduction
+
+
+
+##  *What Should Economists Do?*, an analysis of Buchanan's address. 
+
+  In this address, Buchanan wants to persuade economists to change the lens through which they view the work they do. He argues that many economists center their work around resource allocation when they should focus on simply studying the voluntary exchanges between people. When he states that he proposes an "adoption of a sophistaced 'catallactics'," he means that economists should study markets as people who make voluntary exchanges and not a means of solving the economic problem. 
+  The definition of the economic problem is central to Buchanan's criticism of the practices of economists. As he writes, "The economic problem involves the allocation of scarce means among alternative or competing ends. The problem is one of allocation, made necessary by the fact of scarcity, the necessity to choose @buchanan1964." Buchanan refers to T.D. Wheldon as saying that the very existence of a problem means that there must be a solution. It is this pursuit of the solution that has lead economists down an erroneous path. If there were a single solution to the economic problem, economists may be better defined as applied mathematicians whose research equates to finding the parameters that lead to the optimal solution. This work is better left to computers than humans. Howerever, as Buchanan states: "If the utility function of thechoosing agent is fully defined in advance, choice becomes purely mechanical. No 'decision,' as such, is required; there is no weighing of alternatives. On the other hand, if the utility function is not wholly defined, choice becomes real, and decisions become unpredictable mental events @buchanan1964." 
+  He goes further to say that economists should not look through the lens of "choices" at all but focus on "exchange". He proposes that the word "Symbiotics" may be a better fit to describe the methodology he suggests. The subject of research is the same but the way economists view it would be completely different. This method of study focus purely on the obervation of human exchanges. 
+
+## Literature Review 
+*The Use of Knowledge in Society*
+
+  Hayek addresses the way each person their personal knowledge to make decisions that lead to better economic planning than would be possible by a central planning organization. Individuals use the unique knowledge of the circumstance of their time and place to make decisions. This type of knowledge is not scientific and could not be communicated to a central entity. The signal given by prices helps individuals to make economic decisions without knowing the cause or effect of the changes that occur relevant to their particular decision. These constant, individual decisions, based on personal knowledge and the signals of prices lead to a "conscious direction" without the individual agents knowing how they have contributed. 
+  
+*Machine Learning at Central Banks*
+  
+  The authors explore the possible applications of machine learning systems in central banking. As the role of market oversight by central banks has expanded following the financial crisis of 2008, central banks have been given access to large amounts of granular data from the markets they oversee. The central bank’s concern for macro-economic movement can be better understood by aggregating microeconomic transactions rather than relying on assumptions built into macro-economic models. In this application, machine learning analysis can be immensely useful. Machine learning systems can process vast amounts of data to determine its effects on a certain outcome or search for patterns in the data. This can be a powerful tool for determining the ever changing factors that influence macro-economic movements. In today’s evolving economies It is hard to rely on static economic models to describe or try to predict movements in current economies. 
+  
+  The authors also highlight three challenges to using machine learning systems in central banks. The first is the "black box" problem. Different machine learning systems have varying degrees of opacity as to how an output is determined given the different inputs and parameters. In general, the more accurate systems are more opaque in how inputs are obtained. Due to the increasing desire for central banks to be transparent in how policy decisions are made, simpler models would need to be used in order defend how information is processed and a conclusion is reached. The second is the problem of correlation vs. causality. Machine learning systems are very good at finding correlated patterns in large data sets. However, it still requires human research and deliberation to determine a cause and effect relationship. The third problem is that many machine learning models largely ignore the flow of time in calculations. 
+  
+  A large portion of the paper goes through the details of how different machine learning systems work. There are also three case studies done to illustrate the application of different types of systems to problems relevent to central banks. The case studies include banking supervision under imperfect information, UK CPI inflation forecasting, and unicorns in financial technology.
+
+
+## Outline
+*Introduction
+  +Thesis statement: 
+*The dual mandate of the federal reserve
+  +stable prices
+    +does inflation targeting adequately maintain stable prices
+  +maximum employment
+*Machine learning at central banks
+  +The use of unsupervised machine learning to find relevant data pertaining to the dual mandate
+*The price of inflation
+  +explore how an adequate price mechanism could be used to maintain a stable rate of inflation
+
+
+
+
+<!--
+# References
+\setlength{\parindent}{-0.2in}
+\setlength{\leftskip}{0.2in}
+\setlength{\parskip}{8pt}
+\vspace*{-0.2in}
+\noindent
+-->
+
