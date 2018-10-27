@@ -10,8 +10,8 @@ title: "Proposal: What Should Central Bankers Do?"
 author:
 - name: Kaiden Billings
   affiliation: Utah State University
-abstract: ""
-keywords: "central banks, machine learning"
+abstract: "Buchanan's analysis of what economists should do is used as a model to analyze what central banks should do. Central banks can use the power of machine learning to study markets and identify factors that can inform their policy decisions. An anlysis is given of current policy tools and how, specifically, the Federal Reserve can fulfill its dual mandate without basing policy decisions on resource allocation economics."
+keywords: "central banks, federal reserve, machine learning"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 geometry: margin=1in
 fontfamily: mathpazo
@@ -25,8 +25,7 @@ biblio-style: apsr
 >  
 
 # Introduction
-
-
+  Some may consider the Federal Reserve and other central banks to the epitome of what Buchanan critizes as he talks about the pitfalls of resource allocation economics. Central banks have a large influence on markets around the world. Their existence is central to the monetary stabililty of many modern countries. Even a centralized institution such as a central bank can learn from the thoughts of economists such as Buchanan and Hayek. Central banks can leverage the analytical power of machine learning to study markets and the exchange between people to better inform their policy decisions.
 
 ##  *What Should Economists Do?*, an analysis of Buchanan's address. 
 
@@ -50,15 +49,17 @@ biblio-style: apsr
 
 ## Outline
 *Introduction
-  +Thesis statement: 
-*The dual mandate of the federal reserve
+  +Thesis statement: Central banks can leverage the analytical power of machine learning to study markets and the exchange between people to better inform their policy decisions.
+*The dual mandate of the Federal Reserve
   +stable prices
-    +does inflation targeting adequately maintain stable prices
+    +Does inflation targeting adequately maintain stable prices?
+    +Is it a tool of resource allocation as critized by Buchanan?
   +maximum employment
 *Machine learning at central banks
-  +The use of unsupervised machine learning to find relevant data pertaining to the dual mandate
+  +The use of unsupervised machine learning to find relevant data pertaining to the dual mandate and inform policy decisions.
 *The price of inflation
   +explore how an adequate price mechanism could be used to maintain a stable rate of inflation
+*Conclusion
 
 
 
