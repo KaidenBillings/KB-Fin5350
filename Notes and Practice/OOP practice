@@ -1,0 +1,39 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Nov 19 15:43:33 2018
+
+@author: kaidenbillings
+"""
+
+### Simple Critter
+
+class Critter(object): # Defining the class
+    """A virtual pet"""
+    def __init__(self, name): # using contructors
+        print("A new critter has been born!")
+        self.name = name #instantiating an attribute
+        
+    def __str__(self):
+        rep = "Critter object\n"
+        rep += "name: " + self.name + "\n"
+        return rep
+    
+    def talk(self): # defining a method
+        print("Hi. I'm", self.name, "\n")
+        
+# Main
+crit1 = Critter("Poochie") #Instantiating an Object and intitializing an attribute
+crit1.talk() #invoking a method
+
+crit2 = Critter("Randolph")
+crit2.talk()
+
+print("Printing crit1:")
+print(crit1)
+
+print("Directly accessing crit1.name:")
+print(crit1.name)
+
+
+input("\n\nPress the enter key to exit.")

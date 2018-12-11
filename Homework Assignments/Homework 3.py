@@ -87,6 +87,16 @@ def bsm_put_psi(spot, strike, vol, rate, tau, div):
     psi = tau*spot*np.exp(-div*tau)*norm.cdf(-d1)
     return psi
 
+def plot_price_path(path):
+    nsteps = path.shape[0]
+    plt.plot(path, 'b', linewidth = 2.5)
+    plt.title("Simulated Binomial Price Path")
+    plt.xlabel("Time Steps")
+    plt.ylabel("Stock Price ($)")
+    plt.xlim((0, nsteps))
+    plt.grid(True)
+    plt.show()
+
 
 ### problem 1
 K = 40
@@ -103,7 +113,7 @@ call_gamma_plot = np.zeros(S)
 call_vega_plot = np.zeros(S)
 call_theta_plot = np.zeros(S)
 call_rho_plot = np.zeros(S)
-for S in range(1,80): ### for some reason there is a division by zero when the range starts at zero
+for S in range(1,S): ### for some reason there is a division by zero when the range starts at zero
     call_delta_plot[S] = bsm_call_delta(S, K, v, r, T, q)
     call_gamma_plot[S] = bsm_gamma(S, K, v, r, T, q)
     call_vega_plot[S] = bsm_vega(S, K, v, r, T, q)
@@ -116,15 +126,37 @@ plt.plot(x, call_theta_plot)
 plt.plot(x, call_rho_plot)
     
 ### 1c
-for S in range(1,80):
-    bsm_put_delta(S, K, v, r, T, q)
-    bsm_gamma(S, K, v, r, T, q)
-    bsm_vega(S, K, v, r, T, q)
-    bsm_put_theta(S, K, v, r, T, q)
-    bsm_put_rho(S, K, v, r, T, q)
-### insert matplot code
+put_delta_plot = np.zeros(S)
+put_gamma_plot = np.zeros(S)
+put_vega_plot = np.zeros(S)
+put_theta_plot = np.zeros(S)
+put_rho_plot = np.zeros(S)
+for S in range(1,S):
+    put_delta_plot[S] = bsm_call_delta(S, K, v, r, T, q)
+    put_gamma_plot[S] = bsm_gamma(S, K, v, r, T, q)
+    put_vega_plot[S] = bsm_vega(S, K, v, r, T, q)
+    put_theta_plot[S] = bsm_call_theta(S, K, v, r, T, q)
+    put_rho_plot[S] = bsm_call_rho(S, K, v, r, T, q)
+plt.plot(x, put_delta_plot)
+plt.plot(x, put_gamma_plot)
+plt.plot(x, put_vega_plot)
+plt.plot(x, put_theta_plot)
+plt.plot(x, put_rho_plot)
 
 
+### problem 2
+S = 41
+n = 1000
+T = 5
+h = T/n
+
+price_path = np.zeros(n)
+price_path[0] = S
+for t in range (1,n):
+    z = np.random.normal(size = 1)
+    price_path[t] = price_path[t-1]*np.exp((r - q - .5*v**2)*h + v*np.sqrt(h)*z)
+
+plot_price_path(price_path)
     
     
 
